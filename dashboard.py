@@ -1,3 +1,5 @@
+"""requires a config file with a sqlalchemy database engine"""
+
 import pandas as pd
 import panel as pn
 from config import db
