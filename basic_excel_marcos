@@ -1,0 +1,250 @@
+
+Public FMT_Counter As Boolean
+Public FMT2_Counter As Boolean
+
+Sub Percent_Format()
+
+' Percent_Format Macro
+' Keyboard Shortcut: Ctrl+Shift+P
+    
+    Selection.NumberFormat = "_(* 0.0 %_);_(* (0.0 %);_(* ""-""??_);_(@_)"
+
+End Sub
+
+
+
+Sub Acct_FMT1()
+
+' Acct_FMT1 Macro
+' Keyboard Shortcut: Ctrl+Shift+N
+
+If FMT_Counter = True Then
+
+    FMT_Counter = False
+
+    Selection.NumberFormat = "_(* #,##0_);_(* (#,##0);_(* ""-""_);_(@_)"
+   
+Else
+
+    FMT_Counter = True
+
+    Selection.NumberFormat = "$_(* #,##0_);$_(* (#,##0);_(* ""-""_);_(@_)"
+
+End If
+
+ 
+
+End Sub
+
+Sub Acct_FMT2()
+
+' Acct_FMT2 Macro
+' Keyboard Shortcut: Ctrl+Shift+M
+
+
+If FMT2_Counter = True Then
+
+    FMT2_Counter = False
+
+    Selection.NumberFormat = "_(* #,##0.00_);_(* (#,##0.00);_(* ""-""??_);_(@_)"
+
+Else
+
+    FMT2_Counter = True
+
+    Selection.NumberFormat = "$_(* #,##0.00_);$_(* (#,##0.00);_(* ""-""??_);_(@_)"
+
+End If
+
+ 
+
+End Sub
+
+Sub highlight_red()
+
+' highlight red Macro
+' Keyboard Shortcut: Ctrl+Shift+J
+
+    With Selection.Interior
+
+        .Pattern = xlSolid
+
+        .PatternColorIndex = xlAutomatic
+
+        .Color = 255
+
+        .TintAndShade = 0
+
+        .PatternTintAndShade = 0
+
+    End With
+
+End Sub
+
+Sub font_Color_black()
+
+' Num_Color_black Macro
+' Keyboard Shortcut: Ctrl+Shift+Z
+
+    With Selection.Font
+
+        .Color = 0
+
+        .TintAndShade = 0
+
+    End With
+
+End Sub
+
+Sub Garamond_11()
+
+' Garamond_11 Macro
+' Keyboard Shortcut: Ctrl+Shift+G
+
+    With Selection.Font
+
+        .Name = "Garamond"
+
+        .Size = 11
+
+    End With
+
+   
+End Sub
+
+Sub highlight_yellow()
+
+' highlight Macro
+' Keyboard Shortcut: Ctrl+Shift+H
+
+    With Selection.Interior
+
+        .Pattern = xlSolid
+
+        .PatternColorIndex = xlAutomatic
+
+        .Color = 65535
+
+        .TintAndShade = 0
+
+        .PatternTintAndShade = 0
+
+    End With
+    
+End Sub
+
+Sub Clear_highlight()
+
+' Clear Macro
+' Keyboard Shortcut: Ctrl+Shift+C
+
+    With Selection.Interior
+
+        .Pattern = xlNone
+
+        .TintAndShade = 0
+
+        .PatternTintAndShade = 0
+
+    End With
+
+End Sub
+
+Sub font_color_blue()
+
+' Color Macro
+' Keyboard Shortcut: Ctrl+Shift+X
+
+    With Selection.Font
+
+        .Color = -65536
+
+        .TintAndShade = 0
+
+    End With
+
+End Sub
+Sub immaterial()
+
+' immaterial tickmark
+' Keyboard Shortcut: Ctrl+Shift+I
+
+    ActiveCell.FormulaR1C1 = "M"
+    With Selection.Font
+        .Strikethrough = True
+        .Color = -16776961
+        .TintAndShade = 0
+    End With
+  
+End Sub
+
+
+Sub Accounting_Header()
+'
+' Accounting_Header Macro
+' Header Format used in wps
+'
+' Keyboard Shortcut: Ctrl+Shift+A
+'
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorLight2
+        .TintAndShade = 0.799981688894314
+        .PatternTintAndShade = 0
+    End With
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Selection.Font.Bold = True
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+End Sub
+
+
+
+
