@@ -22,7 +22,7 @@ def find_mismatch(text):
 
         # Process closing bracket, write your code here
         if next in ")]}":
-            if len(opening_brackets_stack)==0:
+            if not opening_brackets_stack:
                 mismatch.append((next,i+1))
             else:
                 if are_matching(opening_brackets_stack[-1][0],next):
@@ -39,7 +39,7 @@ def main():
     text = input()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
-    if len(mismatch) == 0:
+    if not mismatch:
         print("Success")
     else:
         for i in mismatch:
