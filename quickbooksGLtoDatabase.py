@@ -2,18 +2,21 @@
 import pandas as pd
 import numpy as np
 import argparse
+from itertools import cycle
+from time import sleep
 
-col_name = ["Account Description", "Type", "Date", "Num", "Name",
+
+columnNames = ["Account Description", "Type", "Date", "Num", "Name",
             "Memo", "Split", "Amount", "Balance"]
 
 
-def format_file(df, col_name=col_name):
+def format_file(df, columnNames=columnNames, columnsToBeMerged = [0,1,2,3,4]):
 
-    df['Account Description'] = merge_columns(df[[1, 2, 3]])
+    df['Account Description'] = merge_columns(df[columnsToBeMerged])
 
     # clean up empty columns/rows
     df = df.drop(0)
-    df = df.drop([0, 1, 2, 3, 4], axis=1)
+    df = df.drop(columnsToBeMerged, axis=1)
     df = df.dropna(axis=0, thresh=6)
     df = df.dropna(axis=1, how='all')
 
@@ -21,7 +24,7 @@ def format_file(df, col_name=col_name):
     cols = df.columns.tolist()
     cols = cols[-1:] + cols[:-1]
     df = df[cols]
-    df.columns = col_name
+    df.columns = columnNames
 
     return df
 
@@ -53,19 +56,40 @@ def open_file(filename):
         quit()
 
 
-def main():
+def spinning_wheel():
+	for frame in cycle(r'-\|/-\|/'):
+	    print('\r', frame, sep='', end='', flush=True)
+	    sleep(0.2)
+
+
+def progress(percent=0, width=30):
+    left = width * percent // 100
+    right = width - left
+    print('\r[', '#' * left, ' ' * right, ']',
+          f' {percent:.0f}%',
+          sep='', end='', flush=True)
+
+
+def main(file_location):
+
+    file = format_file(open_file(file_location))
+    print(f"Reformatting {file_location} in progress.")
+    for i in range(101):
+    	progress(i)
+    	sleep(0.01)
+    # consider using Path object for file location, to allow for
+    # more accurate location saving.
+    file.to_csv("modified_GL.csv", index=False)
+    print("")
+    print("File Successfully converted.")
+    return file
+
+
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
                 description='Location of Excel File to be formatted.')
     parser.add_argument('file_location', type=str, help='file location')
     args = parser.parse_args()
 
-    file = format_file(open_file(args.file_location))
-    # consider using Path object for file location, to allow for
-    # more accurate location saving.
-    file.to_csv("modified_GL.csv")
-    print(file)
-
-
-if __name__ == "__main__":
-    main()
+    main(args.file_location)
