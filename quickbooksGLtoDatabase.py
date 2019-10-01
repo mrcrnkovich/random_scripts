@@ -55,13 +55,7 @@ def open_file(filename):
         print("Error with filename")
         quit()
 
-
-def spinning_wheel():
-	for frame in cycle(r'-\|/-\|/'):
-	    print('\r', frame, sep='', end='', flush=True)
-	    sleep(0.2)
-
-
+# progress bar. Unnecessary for functionality and can be omitted.	
 def progress(percent=0, width=30):
     left = width * percent // 100
     right = width - left
