@@ -20,10 +20,9 @@ def format_file(df, columnNames=columnNames, columnsToBeMerged = [0,1,2,3,4]):
     df = df.dropna(axis=0, thresh=6)
     df = df.dropna(axis=1, how='all')
 
-    # Reindex Columns
+    # Reindex Columns, move last column to first position
     cols = df.columns.tolist()
-    cols = cols[-1:] + cols[:-1]
-    df = df[cols]
+    df = df[cols[-1:] + cols[:-1]]
     df.columns = columnNames
 
     return df
