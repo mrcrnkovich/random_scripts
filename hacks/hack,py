@@ -1,0 +1,20 @@
+#! /usr/bin/python3
+
+import sys
+
+args = [arg for arg in sys.argv]
+
+def flag(flags):
+  # if flags is not array: error
+  def inner(args):
+    return(any(flag in args for flag in flags))
+  return inner
+
+help = flag(['-h', '--help'])
+uppercase = flag(['-u'])
+lowercase = flag(['-l'])
+other = flag(['--other'])
+
+print("help: ", help(args))
+print("uppercase: ", uppercase(args))
+print("lowercase: ", lowercase(args))

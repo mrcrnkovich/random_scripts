@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Resume</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="dist/theme/league.css"/>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="michael-crnkovich-cpa" class="slide level2">
+<h2>MICHAEL CRNKOVICH, CPA</h2>
+<p>## MRCrnkovich@gmail.com ## (717) 940 - 0962</p>
+<h3 id="projects">Projects:</h3>
+<h4 id="code-for-philly---paws-data-pipeline">Code For Philly - Paws Data Pipeline</h4>
+<p>As a volunteer with Code for Philly I am helping to build a dashboard for the PAWS Philadelphia organization to be able to upload, download, view, and search data from the various sources in the organization. Technologies used: Git, Docker, Python, Javascript, React.</p>
+<h4 id="crm-application-for-real-estate-agents">CRM application for Real Estate Agents</h4>
+<p>Currently building a Customer Relationship Management tool (CRM) tailored to real estate agents and teams. Real Estate Teams will be able to add multiple agents, who can manage their clients and properties shown to each client they work with. There are methods to create, read, update, and delete clients in the API. All API methods use JSON formatting. Technologies used: Python, Flask, Sqlalchemy, Pandas, HTML, jQuery, SQLite, Postgresql, Linode Server.</p>
+<h4 id="dashboard-to-analyze-workload-by-managerpartner">Dashboard to analyze workload by manager/partner</h4>
+<p>Created a dashboard to analyse workload by manager and partner. Joined a listing of clients assigned by partner and manager to a database containing the hours worked by staff, client, and total billings. This databoard provided a more complete picture of workload than had been previously available. Technologies used: Python, Pandas data analysis library, Panel, and a PostgresSQL database.</p>
+<h4 id="data-cleaning-command-line-script">Data cleaning command line script</h4>
+<p>Created a command line script to convert an excel file formatted as a report from the QuickBooks application to a database style format. By converting the Quickbooks report to database format, this enabled users to filter, sort, and create pivot tables from the Quickbooks report. Technologies utilized: Python, Pandas, Python Argparse</p>
+<h4 id="other-technologies">Other Technologies:</h4>
+<p>Currently developing in a Linux environment, using Linode servers, utilizing GitHub for change management and learning React.</p>
+<h4 id="work-experience">Work Experience:</h4>
+<h4 id="mac-capital-partners-philadelphia-pa">MAC Capital Partners, Philadelphia, PA</h4>
+<h4 id="june-2020---present"><em>June 2020 - Present</em></h4>
+<h4 id="novak-francella-philadelphia-pa">Novak Francella, Philadelphia, PA</h4>
+<h4 id="audit-manager-june-2017-june-2020"><em>Audit Manager (June 2017 – June 2020)</em></h4>
+<h4 id="the-siegfried-group-llp-philadelphia-pa">The Siegfried Group, LLP, Philadelphia, PA</h4>
+<h4 id="associate-manager-november-2015-october-2016"><em>Associate Manager (November 2015 – October 2016)</em></h4>
+<h4 id="kpmg-llp-philadelphia-pa">KPMG, LLP, Philadelphia, PA</h4>
+<h4 id="audit-manager-july-2014-april-2015"><em>Audit Manager (July 2014 – April 2015)</em></h4>
+<h4 id="audit-senior-associate-october-2013-june-2014-november-2009">*Audit Senior Associate (October 2013 – June 2014) (November 2009 –</h4>
+<p>March 2013)*</p>
+<ul>
+<li class="fragment"><p>Worked with audit clients who issued GAAP and statutory financial &gt; statements in the insurance industry, with a mix of health &gt; insurance and property and casualty companies.</p></li>
+<li class="fragment"><p>Worked in a supervisory function of staff and interns. Responsible &gt; for training and development of staff skills along with evaluation &gt; of their progress.</p></li>
+<li class="fragment"><p>Coordinated and lead client meetings with middle management and &gt; executive management related to key deliverables and findings.</p></li>
+<li class="fragment"><p>Designed/performed analytical procedures over account balances to &gt; recognize trends and abnormalities.</p></li>
+</ul>
+<h4 id="education-west-chester-university-of-pennsylvania-west-chester-pa">Education:** West Chester University of Pennsylvania, West Chester, PA</h4>
+<p>Bachelor of , Accounting and Finance</p>
+<h4 id="certifications-certified-public-accountant-commonwealth-of">Certifications:** Certified Public Accountant, Commonwealth of</h4>
+<p>Pennsylvania</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
